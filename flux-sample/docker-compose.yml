@@ -1,0 +1,10 @@
+services:
+  comfyui:
+    image: ghcr.io/burritocatai/brev-comfyui:latest
+    container_name: brev-comfyui
+    ports:
+      - "8082:8082/tcp"
+    environment:
+      - COMFYUI_VERSION=v0.3.18
+      - COMFYUI_NODE_MANAGER=true
+      - NODES_REPOS=https://github.com/burritocatai/brev-comfyui/tree/main/src/flux-sample/repos.txt
