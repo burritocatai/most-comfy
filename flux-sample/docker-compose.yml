@@ -1,10 +1,12 @@
 services:
   comfyui:
-    image: ghcr.io/burritocatai/brev-comfyui:latest
-    container_name: brev-comfyui
+    image: ghcr.io/burritocatai/most-comfy:latest
+    container_name: most-comfy
     ports:
       - "8082:8082/tcp"
     environment:
       - COMFYUI_VERSION=v0.3.18
       - COMFYUI_NODE_MANAGER=true
-      - NODES_REPOS=https://github.com/burritocatai/brev-comfyui/tree/main/src/flux-sample/repos.txt
+      - NODES_REPOS=https://github.com/burritocatai/most-comfy/tree/main/src/flux-sample/repos.txt
+      - CIVITAI_MODELS=https://github.com/burritocatai/most-comfy/tree/main/src/flux-sample/civitai-models.txt
+  
