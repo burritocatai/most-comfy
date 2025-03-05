@@ -21,11 +21,12 @@ RUN apt update && \
     libglib2.0-0 && \
     rm -rf /var/lib/apt/lists/*
 
+RUN python3 -m pip3 install --upgrade pip3
 
-RUN pip install --upgrade pip && \
-    pip install wheel && \
-    pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 && \
-    pip install insightface onnxruntime onnxruntime-gpu huggingface_hub[cli]
+RUN pip3 install --upgrade pip && \
+    pip3 install wheel && \
+    pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 && \
+    pip3 install insightface onnxruntime onnxruntime-gpu huggingface_hub[cli]
 
 
 # Install dependencies needed for Rust
