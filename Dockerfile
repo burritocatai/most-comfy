@@ -14,6 +14,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && apt-get install -y \
     curl \
     build-essential \
+    git \
     gcc \
     pkg-config \
     --no-install-recommends \
@@ -30,12 +31,15 @@ RUN rustc --version && cargo --version
 
 # Get ready for Comfyui
 RUN useradd comfyui && \
+    mkdir /home/comfyui && \
+    mkdir /home/comfyui/.cache && \
     mkdir /comfyui && \
     mkdir /comfyui/cache
 
 COPY ./shell/start.sh /comfyui/start.sh
 
 RUN chown -R comfyui:comfyui /comfyui && \
+    chown -R comfyui:comfyui /home/comfyui && \
     chmod +x /comfyui/start.sh
 
 USER comfyui
