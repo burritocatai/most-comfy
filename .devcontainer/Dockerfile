@@ -1,5 +1,9 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+FROM python:3.12.1-slim-bullseye
+USER root
 
-# use this Dockerfile to install additional tools you might need, e.g.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update && \
+    apt-get -y install --reinstall ca-certificates && \
+    apt-get -y install software-properties-common && \
+    pip install --upgrade pip
+
+RUN pip install ipykernel jupyter
