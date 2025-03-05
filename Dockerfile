@@ -14,14 +14,13 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt update && \
     apt -y upgrade && \
     apt install -y --no-install-recommends \
-    git python3 python3.10-venv python3-dev \
+    git python3 python3.10-venv python3-dev python3-pip \
     build-essential libssl-dev libffi-dev \
     libxml2-dev libxslt1-dev zlib1g-dev libgl1 \
     libgl1-mesa-glx \
     libglib2.0-0 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install --upgrade pip
 
 RUN pip3 install --upgrade pip && \
     pip3 install wheel && \
