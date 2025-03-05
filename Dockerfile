@@ -30,3 +30,6 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 # Verify installation
 RUN rustc --version && cargo --version
 
+
+WORKDIR /workspace
+CMD ["/bin/bash"]
