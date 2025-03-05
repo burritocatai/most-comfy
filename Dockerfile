@@ -21,7 +21,7 @@ RUN apt update && \
     libglib2.0-0 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip3 install --upgrade pip3
+RUN python3 -m pip install --upgrade pip
 
 RUN pip3 install --upgrade pip && \
     pip3 install wheel && \
