@@ -7,6 +7,9 @@ services:
     environment:
       - COMFYUI_VERSION=v0.3.18
       - COMFYUI_NODE_MANAGER=true
-      - NODES_REPOS=https://github.com/burritocatai/most-comfy/tree/main/src/flux-sample/repos.txt
-      - CIVITAI_MODELS=https://github.com/burritocatai/most-comfy/tree/main/src/flux-sample/civitai-models.txt
+      - NODES_REPOS=/src/repos.txt
+      - CIVITAI_MODELS=/src/civitai-models.txt
+    volumes:
+      - ./repos.txt:/src/repos.txt
+      - ./civitai-models.txt:/src/civitai-models.txt
   
