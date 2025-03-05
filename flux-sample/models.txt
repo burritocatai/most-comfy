@@ -1,6 +1,0 @@
-# flux d
-urn:air:flux1:checkpoint:civitai:618692@691639
-
-# vae
-urn:air:flux1:vae:civitai:636193@711305
-

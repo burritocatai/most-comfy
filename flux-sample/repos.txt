@@ -1,8 +1,0 @@
-# ComfyUI Impact Pack
-https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
-
-# Impact Subpack
-https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git
-
-# Comfyroll Custom Nodes
-https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git
